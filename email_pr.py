@@ -7,14 +7,14 @@ from collections import defaultdict
 import matplotlib.pyplot as plt
 
 # 数据加载
-emails = pd.read_csv("Emails.csv")
+emails = pd.read_csv("./Emails.csv")
 # 读取别名文件
-file = pd.read_csv("Aliases.csv")
+file = pd.read_csv("./Aliases.csv")
 aliases = {}
 for index, row in file.iterrows():
     aliases[row['Alias']] = row['PersonId']
 # 读取人名文件
-file = pd.read_csv("Persons.csv")
+file = pd.read_csv("./Persons.csv")
 persons = {}
 for index, row in file.iterrows():
     persons[row['Id']] = row['Name']
